@@ -5,7 +5,7 @@ var username = document.getElementById("username").value
 				}
 			})
 			var dataset = [];
-			function botMessage() {
+			const botMessage = () => {
 				var prompts = ["hi", "ok yea?", "dude, idk", "I don't know what u talking", "huh?", "???", "I just don't get it", "I see", "… I love it!", "HAHAHAHA", "I don't know why I'm here", "I just know how to sing rickroll", "I'm a dumby bot", "I don't care", "What?", "Totally don't understand", "No way…", "Bye, nap time", "Ok?", "Ok, so?"]
 				var messageToSend = prompts[Math.floor(Math.random() * prompts.length)]
 				dataset.push(messageToSend)
@@ -16,7 +16,7 @@ var username = document.getElementById("username").value
 					.text((d) => "Bot: " + d)
 				scrollBy(0, 100)
 			}
-			function main() {
+			const main = () => {
 				username = document.getElementById("username").value
 				var target = document.getElementById("text").value
 				dataset.push(target)
